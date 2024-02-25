@@ -174,7 +174,7 @@ def test_sum_distribute(ls1: List[float], ls2: List[float]) -> None:
     for x,y in zip(ls1,ls2):
         res1.append(add(x,y))
 
-    assert_close(res1, addLists(ls1,ls2))
+    assert res1 == addLists(ls1,ls2)
 
 @pytest.mark.task0_3
 @given(lists(small_floats))
