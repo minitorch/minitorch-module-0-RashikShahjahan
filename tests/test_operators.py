@@ -172,7 +172,7 @@ def test_sum_distribute(ls1: List[float], ls2: List[float]) -> None:
     """
     res1 = []
     for x,y in zip(ls1,ls2):
-        res1.append(sum(x,y))
+        res1.append(add(x,y))
 
     assert_close(res1, addLists(ls1,ls2))
 
