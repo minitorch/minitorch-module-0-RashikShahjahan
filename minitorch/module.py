@@ -47,13 +47,13 @@ class Module:
         Returns:
             The name and `Parameter` of each ancestor parameter.
         """
-        res = []
-        for name,param in list(self._parameters.items()):
-            res.append((name,param))
+         
+        res = {self._parameters}
         
         for module in self._modules.values():
             for name,param in list(module._parameters.items()):
-                res.append((name,param))
+                res[name] = param
+
 
         return res
 
