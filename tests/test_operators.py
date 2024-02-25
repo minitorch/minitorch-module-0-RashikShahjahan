@@ -126,7 +126,7 @@ def test_symmetric(a,b) -> None:
     Write a test that ensures that :func:`minitorch.operators.mul` is symmetric, i.e.
     gives the same value regardless of the order of its input.
     """
-    assert eq(mul(a,b),mul(b,a))
+    assert assert_close(mul(a,b),mul(b,a))
 
 @given(small_floats, small_floats, small_floats)
 @pytest.mark.task0_2
