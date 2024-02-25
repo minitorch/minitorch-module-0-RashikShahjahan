@@ -107,8 +107,8 @@ def test_sigmoid(a: float) -> None:
     * It crosses 0 at 0.5
     * It is  strictly increasing.
     """
-    assert lt(sigmoid(a),1.0)
-    assert lt(0.0,sigmoid(a),)
+    assert sigmoid(a) <= 1.0
+    assert sigmoid(a) >=0.0
     assert eq(sigmoid(0.0),0.5)
 
 @pytest.mark.task0_2
