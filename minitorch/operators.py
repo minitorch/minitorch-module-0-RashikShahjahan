@@ -201,5 +201,5 @@ def sum(ls: Iterable[float]) -> float:
 
 def prod(ls: Iterable[float]) -> float:
     "Product of a list using `reduce` and `mul`."
-    prod_ls_fn = reduce(mul,0)
+    prod_ls_fn = reduce(mul,1)
     return prod_ls_fn(ls)

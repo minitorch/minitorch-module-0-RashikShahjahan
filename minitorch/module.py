@@ -50,6 +50,10 @@ class Module:
         res = []
         for name,param in list(self._parameters.items()):
             res.append((name,param))
+        
+        for module in self._modules.values():
+            for name,param in list(module._parameters.items()):
+                res.append((name,param))
 
         return res
 
@@ -58,6 +62,10 @@ class Module:
         res = []
         for param in list(self._parameters.values()):
             res.append(param)
+        
+        for module in self._modules.values():
+            for param in list(module._parameters.values()):
+                res.append(param)
 
         return res
 
