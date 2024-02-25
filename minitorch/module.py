@@ -48,7 +48,7 @@ class Module:
             The name and `Parameter` of each ancestor parameter.
         """
          
-        res = {self._parameters}
+        res = self._parameters
         
         for module in self._modules.values():
             for name,param in list(module._parameters.items()):
