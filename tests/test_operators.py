@@ -109,7 +109,7 @@ def test_sigmoid(a: float) -> None:
     """
     assert lt(sigmoid(a),1.0)
     assert lt(0.0,sigmoid(a),)
-    assert eq(sigmoid(0.5),0.0)
+    assert eq(sigmoid(0.0),0.5)
 
 @pytest.mark.task0_2
 @given(small_floats, small_floats, small_floats)
