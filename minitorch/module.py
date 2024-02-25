@@ -50,9 +50,9 @@ class Module:
          
         res = self._parameters
         
-        for module in self._modules.values():
+        for mod_name, module in self._modules.items():
             for name,param in list(module._parameters.items()):
-                res[name] = param
+                res[f'{mod_name}.{name}'] = param
 
 
         return res
